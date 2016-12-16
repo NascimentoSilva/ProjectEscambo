@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <header>
-  <title></title>
+  <title>Escambo</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/escambo.css' %}">
+  <div class="page-header">
+    <h1><a href="{% url 'home' %}">Escambo</a></h1>
+  </div>
 </header>
-<body>
-
+<body class="page-body">
+  {% block content %}
+  {% endblock %}
 </body>
+</html>
