@@ -25,8 +25,7 @@ SECRET_KEY = 'vk1cjr6d8=*w2vp5q7#g-pz1qbr&07w*j%t)c0m70(4w5iy)id'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['jonatas.pythonanywhere.com']
 
 # Application definition
 
