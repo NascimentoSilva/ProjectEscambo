@@ -9,6 +9,15 @@
   text-decoration: none;
 }
 
+.page-right {
+  text-decoration: none;
+  float: right;
+  font-size: 20pt;
+  margin-right: 20px;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
 .page-body {
   background-color: #F0FFFF;
 }

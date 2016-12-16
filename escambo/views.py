@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.utils import timezone
+from .forms import PostForm
 
 # Create your views here.
 def home(request):
@@ -12,8 +13,8 @@ def detalhes(request, pk):
     return render(request, 'escambo/detalhes.html', {'post' : post})
 
 def novo(request):
-
-    return render(request, 'escambo/novo.html', {})
+    form = PostForm()
+    return render(request, 'escambo/novo.html', {'form' : form})
 
 def sobre(request):
     return render(request, 'escambo/sobre.html', {})
