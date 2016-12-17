@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^detalhes/(?P<pk>[0-9]+)/$', views.detalhes, name="detalhes"),
     url(r'^novo/$', views.novo, name="novo"),
     url(r'^sobre/$', views.sobre, name="sobre"),
+    url(r'^detalhes/(?P<pk>[0-9]+)/edit/$', views.editar, name='editar'),
 ]

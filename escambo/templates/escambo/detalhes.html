@@ -1,4 +1,11 @@
 {% extends 'escambo/base.html' %}
 
 {% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.text }}</p>
+  <div class="imagem">
+    <p><img src='{{ post.image.url }}'/></p>
+  </div>
+  <a class="btn btn-default" href="{% url 'home' %}">Voltar</a>
+  <a class="btn btn-default" href="{% url 'editar' pk=post.pk %}">Editar</a>
 {% endblock %}

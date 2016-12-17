@@ -5,9 +5,9 @@
 {% for post in posts %}
     <div>
 
-        <h1>{{ post.title }}</h1>
+        <a href="{% url 'detalhes' pk=post.pk %}"><h1>{{ post.title }}</h1></a>
         <p>{{ post.text }}</p>
-        <p><a href="{% url 'detalhes' pk=post.pk %}">detalhes</a></p>
+        <a class="btn btn-default" href="{% url 'detalhes' pk=post.pk %}">Detalhes</a>
 
     </div>
 {% endfor %}
