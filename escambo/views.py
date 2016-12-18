@@ -32,3 +32,6 @@ def editar(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'escambo/novo.html', {'form': form})
+
+def index(request):
+    return render(request, 'escambo/index.html', {})
