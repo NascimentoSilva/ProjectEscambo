@@ -1,10 +1,13 @@
 {% extends 'escambo/base.html' %}
 
 {% block content %}
-<h1>Criar Publicação</h1>
-<form method="POST" class="post-form">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="save btn btn-default">Enviar</button>
+<div class="container">
+    <h1>Criar Publicação</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Enviar</button>
+        <a class="btn btn-default" class="btn btn-xl" href="{% url 'home' %}">Voltar</a>
 
-</form>
+    </form>
+  </div>
 {% endblock %}

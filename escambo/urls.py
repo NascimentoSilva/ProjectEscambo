@@ -11,4 +11,8 @@ urlpatterns = [
     url(r'^sobre/$', views.sobre, name="sobre"),
     url(r'^detalhes/(?P<pk>[0-9]+)/edit/$', views.editar, name='editar'),
     url(r'^$', views.index, name='index'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

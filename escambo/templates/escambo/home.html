@@ -3,13 +3,16 @@
 {% block content %}
 
 {% for post in posts %}
-    <div>
 
+    <div class="container">
         <a href="{% url 'detalhes' pk=post.pk %}"><h1>{{ post.title }}</h1></a>
         <p>{{ post.text }}</p>
         <a class="btn btn-default" class="btn btn-xl" href="{% url 'detalhes' pk=post.pk %}">Detalhes</a>
 
+        <p>_______________________________________________________________</p>
+
     </div>
+
 {% endfor %}
 
 {% endblock content %}

@@ -13,8 +13,17 @@ def detalhes(request, pk):
     return render(request, 'escambo/detalhes.html', {'post' : post})
 
 def novo(request):
-    form = PostForm()
-    return render(request, 'escambo/novo.html', {'form' : form})
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('home')
+    else:
+        form = PostForm()
+    return render(request, 'escambo/novo.html', {'form': form})
 
 def sobre(request):
     return render(request, 'escambo/sobre.html', {})
